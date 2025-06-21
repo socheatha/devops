@@ -9,5 +9,5 @@ services:
     image: 69966/earthdx:78
     container_name: reactjs-cont
     ports: 
-      - 8080:80
+      - 8081:80
     
