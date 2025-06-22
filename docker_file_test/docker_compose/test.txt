@@ -1,0 +1,7 @@
+docker run -dp 5432:5432 -e POSTGRES_PASSWORD=password --name postgres-cont -v my-vol:/var/lib/postgresql/data postgres
+
+docker run -dp 5432:5432 -e POSTGRES_PASSWORD=password --name postgres-cont --mount type=volume,source=my-new-vol,target=/var/lib/postgresql/data postgres
+
+docker run -it --name container1 --network test-network busybox:latest
+docker run -it --name container2 --network test-network busybox:latest
+docker run -it --name container2 busybox:latest

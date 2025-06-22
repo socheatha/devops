@@ -1,0 +1,32 @@
+# docker compose -> yaml 
+# run multi-containers 
+# api, frontend , database, loadbalancer 
+services:
+  nginx-1: 
+    image: nginx:latest 
+    container_name: nginx-container-1 
+    ports:
+      - 3001:80 
+    volumes:
+      - nginx-vol:/usr/share/nginx/html
+    networks:
+      - nginx-network
+  nginx-2: 
+    container_name: nginx-container-2
+    image: nginx:latest 
+    ports:
+      - 3002:80 
+    networks:
+      - nginx-network
+    volumes:
+      - nginx-vol:/usr/share/nginx/html
+networks:
+  nginx-network: 
+volumes:
+  nginx-vol: 
+
+
+# docker compose config 
+# docker compose up -d 
+# docker compose down 
+# docker compose down -v
