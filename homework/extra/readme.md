@@ -33,6 +33,7 @@ server {
 ## Final result
 ```
 server {
+    listen 80;
     server_name jenkin.msswebcenter.com;
 
     location / {
