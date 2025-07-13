@@ -1,0 +1,1 @@
+https://socheatha:11665e67cf3613eb33fffc86422a121ae8@jenkin.msswebcenter.com/job/pipeline-slave-01/build?token=123456
