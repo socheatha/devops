@@ -1,0 +1,23 @@
+- name: Update Apt Cache
+  apt:
+    update_cache: true
+- name: Install Nginx
+  apt:
+    state: preset
+- name: Install Docker
+  apt:
+    name: docker 
+    state: present
+- name: Install Docker Compose 
+  apt: 
+    name: docker-compose 
+    state: resent 
+- name: Install fish shell 
+  apt:
+    name: fish 
+    state: resent 
+- name: Append user to group docker 
+  user: 
+    name: teamhack94
+    groups: docker 
+    append: true 

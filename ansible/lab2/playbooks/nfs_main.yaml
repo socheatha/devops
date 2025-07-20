@@ -1,0 +1,8 @@
+# Combine all playbooks into 1
+---
+- name: Setup NFS Server
+  import_playbook: nfs_server.yaml
+- name: Setup NFS clients
+  import_playbook: nfs_clients.yaml
+- name: Run Spring Boot Services
+  import_playbook: run_spring_compose.yaml
