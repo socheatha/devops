@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ping: 
+    echo "Pinging to all targets machines ..."
+    ansible -i inventory/hosts.ini all -m ping
+
+install:
+    echo "Installing NFS server and clients to all machines ..."
+    ansible-playbook -i inventory/hosts.ini playbooks/nfs_main.yaml

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+create-all: 
+    echo "Create all the master and worker machines .... "
+    ansible-playbook playbooks/gcp_main.yaml
+
+ping: 
+    echo "Pinging to all targets machines ..."
+    ansible all -m ping

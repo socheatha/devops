@@ -1,0 +1,14 @@
+---
+- name: Run Nginx Container
+  hosts: dev1
+  vars: 
+    docker_image: "nginx"
+  tasks:
+    - name: Run Nginx Container
+      community.docker.docker_container:
+        name: nginx_test_container
+        image: "{{ docker_image }}"
+        state: started # Start container
+        restart_policy: always
+        published_ports:
+          - "3000:80"

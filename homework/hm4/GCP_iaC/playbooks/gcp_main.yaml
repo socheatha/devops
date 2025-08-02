@@ -1,0 +1,14 @@
+- name: Create master machines ...
+  hosts: localhost 
+  vars_files: 
+    - ../vars/machines.yaml
+  roles:
+    - create_master_instances
+
+
+- name: Create worker machines ...
+  hosts: localhost 
+  vars_files: 
+    - ../vars/machines.yaml
+  roles:
+    - create_worker_instances

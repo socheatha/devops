@@ -1,0 +1,27 @@
+- name: Update APT caches 
+  apt: 
+    update_cache: yes 
+- name: Install NFS Kernel Server 
+  apt: 
+    name: nfs-kernel-server
+    state: present 
+- name: Create Directory to used 
+  file: 
+    path: "{{ nfs_remote_dir }}"
+    state: directory
+    owner: nobody
+    group: nogroup
+    mode: "0777"
+- name: Write the Config on /etc/exports
+  lineinfile: 
+    path: /etc/exports
+    line: " {{ nfs_remote_dir }} {{nfs_client_ip1}}(rw,sync,no_subtree_check,no_root_squash)  {{nfs_client_ip2}}(rw,sync,no_subtree_check,no_root_squash)"
+    state: present 
+    create: yes 
+- name: Apply Configuration 
+  command: exportfs -ra 
+- name: Restart NFS Kernel Service 
+  systemd: 
+    name: nfs-kernel-server
+    enabled: true 
+    state: restarted 
