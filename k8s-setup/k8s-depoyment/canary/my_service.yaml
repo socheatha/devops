@@ -1,0 +1,17 @@
+# service will point to specific labels 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+spec:
+  selector:
+    app: demo-app 
+  ports:
+  - port: 80
+    targetPort: 80
+
+# kubectl apply -f .
+# kubectl get svc => curl Cluster IP
+# kubectl describe svc/demo-service 
+# kubectl delete -f .
