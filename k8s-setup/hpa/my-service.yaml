@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: nginx-app
+  ports:
+  - port: 80
+    targetPort: 80
+
+# kubectl apply -f .
+# watch kubectl get hpa
+
+# sudo apt update
+# sudo apt install apache2-utils -y 
+# ab -n 10000 -c 1000 http://10.233.56.110/
+# get all -A | grep "schedule"
