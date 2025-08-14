@@ -1,6 +1,8 @@
 nfs_local_dir: /mnt/nfs_shared
 nfs_remote_dir: /srv/nfs_shared
 
-nfs_server_ip: 10.148.0.4
-nfs_client_ip1: 10.148.0.18
-nfs_client_ip2: 10.170.0.6
+nfs_server_ip: 10.128.0.5
+nfs_client_ip1: 10.148.0.28
+nfs_client_ip2: 10.148.0.29
+nfs_client_ip3: 10.170.0.14
+nfs_client_ip4: 10.170.0.15

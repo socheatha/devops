@@ -15,7 +15,7 @@
 - name: Write the Config on /etc/exports
   lineinfile: 
     path: /etc/exports
-    line: " {{ nfs_remote_dir }} {{nfs_client_ip1}}(rw,sync,no_subtree_check,no_root_squash)  {{nfs_client_ip2}}(rw,sync,no_subtree_check,no_root_squash)"
+    line: " {{ nfs_remote_dir }} {{nfs_client_ip1}}(rw,sync,no_subtree_check,no_root_squash)  {{nfs_client_ip2}}(rw,sync,no_subtree_check,no_root_squash)  {{nfs_client_ip3}}(rw,sync,no_subtree_check,no_root_squash)  {{nfs_client_ip4}}(rw,sync,no_subtree_check,no_root_squash)"
     state: present 
     create: yes 
 - name: Apply Configuration 

@@ -8,7 +8,7 @@
 
 
 - name: Setup NFS Client 
-  hosts: dev01,prod01 
+  hosts: prod02,prod03,prod04,prod05 
   become: true 
   vars_files: 
     - ../vars/default.yaml 

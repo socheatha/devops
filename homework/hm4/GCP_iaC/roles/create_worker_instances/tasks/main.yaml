@@ -46,7 +46,7 @@
   loop: "{{ machines_info }}"
   register: gcp_workers_instances
   when: 
-    - item.name in ["worker01"]
+    - item.name in ["worker01", "worker02"]
 
 - name: Register the existing inventory file 
   slurp:

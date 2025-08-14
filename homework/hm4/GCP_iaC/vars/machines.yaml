@@ -1,6 +1,6 @@
 service_account_path: "../google-service-account.json"
 google_project_id: "our-tract-463008-e6"
-ssh_pubkey_path: "/home/teamhack94/.ssh/id_ed25519.pub"
+ssh_pubkey_path: "/home/teamhack94/.ssh/id_rsa.pub"
 
 # Define machine spec
 machine_specs:
